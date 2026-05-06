@@ -1,0 +1,9 @@
+{
+  "name": "kitsune-cti-proxy",
+  "version": "1.0.0",
+  "description": "CORS proxy for Kitsune CTI Platform",
+  "private": true,
+  "scripts": {
+    "dev": "vercel dev"
+  }
+}
