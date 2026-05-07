@@ -21,6 +21,7 @@ const ALLOWED_HOSTS = new Set([
   'www.openphish.com',
   'phishstats.info',
   'phishtank.org',
+  'mitchellkrogza.github.io',
   'www.phishtank.org',
   'data.phishtank.com',
   'spamhaus.org',
@@ -82,10 +83,14 @@ export default async function handler(req, res) {
   }
 
   // Build forward headers
+  // Determine Content-Type from the incoming request
+  // Kitsune sends it as 'Content-Type' header on the proxy call itself
+  const incomingCT = req.headers['content-type'] || 'application/json';
+
   const forwardHeaders = {
     'User-Agent': 'Kitsune-CTI-Proxy/1.0',
-    'Accept': req.headers['accept'] || '*/*',
-    'Content-Type': req.headers['content-type'] || 'application/json',
+    'Accept': req.headers['accept'] || 'application/json, text/plain, */*',
+    'Content-Type': incomingCT,
   };
 
   // Pass through extra headers (for API keys)
