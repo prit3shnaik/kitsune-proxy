@@ -45,6 +45,10 @@ const ALLOWED_HOSTS = new Set([
   'otx.alienvault.com',
   'www.virustotal.com',
   'api.shodan.io',
+  'internetdb.shodan.io',
+  'crt.sh',
+  'rdap.org',
+  'rdap.iana.org',
   'api.abuseipdb.com',
 ]);
 
