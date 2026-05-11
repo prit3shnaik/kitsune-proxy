@@ -5,19 +5,5 @@
       "memory": 256,
       "maxDuration": 15
     }
-  },
-  "headers": [
-    {
-      "source": "/api/(.*)",
-      "headers": [
-        { "key": "Access-Control-Allow-Origin", "value": "*" },
-        { "key": "Access-Control-Allow-Methods", "value": "GET,POST,PUT,DELETE,OPTIONS" },
-        {
-          "key": "Access-Control-Allow-Headers",
-          "value": "Content-Type,Accept,Authorization,X-Target-URL,X-Extra-Headers,X-Auth-Key,X-Api-Key,X-Hibp-Key,X-Gn-Key,X-Urlscan-Key,x-auth-key,x-api-key,x-target-url,x-extra-headers,x-hibp-key,x-gn-key,x-urlscan-key,auth-key,apikey,hibp-api-key,key,API-Key"
-        },
-        { "key": "Access-Control-Max-Age", "value": "86400" }
-      ]
-    }
-  ]
+  }
 }
